@@ -1,23 +1,40 @@
 import React,{useState} from "react";
 import Shop from "../shop/shop";
 import './home.css'
+import Review from "../review/review";
 
 
 
 function Home(){
     const [data , dataState] = useState("Hello World")
-    const propsData = "Testing Props Data"
+    const shopPropsData = "Send props data to shop component"
+    const reviewPropsData = "Send props data to review component"
+    const changeText = "Text is Changed"
+    const myArr = {
+        name:'Amen',
+        age:21,
+        code:"code"
+    }
     function updateData(){
         dataState("The Value is Updated By Using State Hook")
     }
     return(
         <>
         <div className="main_div">
-         <h1 className="mt-2">Example of  useState Hook</h1>
+         <h1 className="mt-5 bg-info">Example of  useState Hook</h1>
         <h3 className="mt-5">{data}</h3>
         <button onClick={updateData}>Update The Value</button>
 
-        <Shop dataToSend={propsData} />
+
+        <div className="shop_child">
+        <h1 className="mt-5 bg-info">Example of Props</h1>
+        <Shop dataToSend={shopPropsData} TestData= {changeText} />
+        
+        <div className="review_child">
+        <Review reviewData={reviewPropsData} sndObject={myArr} />
+        </div>
+
+        </div>
         </div>
         </> 
     )

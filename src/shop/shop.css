@@ -1,0 +1,18 @@
+.div_1{
+    width: 485px;
+    height: 230px;
+    background-color: #00ffff54;
+    margin-top: 8%;
+}
+
+.h3_tag{
+   text-align: center;
+   margin-top: 10%;
+}
+
+.btn_class{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 9%
+}
