@@ -18,6 +18,10 @@ function Home(){
     function updateData(){
         dataState("The Value is Updated By Using State Hook")
     }
+
+    function generateAlert(){
+        alert('Hello i am learning react js')
+    }
     return(
         <>
         <div className="main_div">
@@ -31,7 +35,7 @@ function Home(){
         <Shop dataToSend={shopPropsData} TestData= {changeText} />
         
         <div className="review_child">
-        <Review reviewData={reviewPropsData} sndObject={myArr} />
+        <Review reviewData={reviewPropsData} sndObject={myArr} alertFunction={generateAlert} />
         </div>
 
         </div>
