@@ -20,7 +20,6 @@ function Student_child(props) {
     </tr>
   </thead>
   <tbody>
-   
         {
             studentData.map((student , index )=> (
                 <tr key={student.name}>
@@ -32,12 +31,6 @@ function Student_child(props) {
                 </tr>
             ))
         }
-      {/* <td>{ArrayData[0].name}</td>
-      <td>{ArrayData[0].age}</td>
-      <td>{studentData.university}</td>
-      <td>{studentData.contact_no}</td> */}
-
-    {/* </tr> */}
   </tbody>
 </table>
     </div>
