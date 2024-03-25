@@ -33,6 +33,9 @@ function Conditional_rendering() {
          <h1 className='mt-5'>List Rendering In React Js</h1>
          <h5 className='result'>{result}</h5>
          {/* List Rendering END */}
+
+
+         
       </div>
     </div>
   )
