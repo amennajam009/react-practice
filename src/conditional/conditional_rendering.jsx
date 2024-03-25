@@ -9,7 +9,8 @@ function Conditional_rendering() {
   // List Rendering using .map
   const userList = ['user-1' , 'user-2' , 'user-3' , 'user-4' , 'user-5','user-5']
   const result = userList.map(users => users)
-
+  let TestingCondition = true
+  let Dynamic_Class = TestingCondition? 'text-primary' : 'text-danger'
 
   //student Info Array
   const Student_Info = [
@@ -71,6 +72,9 @@ function Conditional_rendering() {
          {/* Student Child Component START */}
          <Student_child student_array={passingStudentInfo} dataArray = {Student_Info} />
          {/* student Child Component END */}
+
+         
+         <h1 className={`${Dynamic_Class} text-center mt-5`}>Conditionally Apply Css Style</h1>
 
     </div>
   )
