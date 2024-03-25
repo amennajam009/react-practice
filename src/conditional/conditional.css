@@ -1,0 +1,7 @@
+.conditional_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    flex-direction: column;
+}

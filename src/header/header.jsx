@@ -13,15 +13,15 @@ function Header(){
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
             <Link class="nav-link active" aria-current="page" to="/Home">Home</Link>
-  
         </li>
         <li class="nav-item">
             <Link class="nav-link active" aria-current="page" to="/Shop">Shop</Link>
-  
         </li>
         <li class="nav-item">
             <Link class="nav-link active" aria-current="page" to="/Review">Review</Link>
-  
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link active" aria-current="page" to="/Conditional_rendering">Conditional-rendering</Link>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
