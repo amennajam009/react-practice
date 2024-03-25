@@ -67,8 +67,11 @@ function Conditional_rendering() {
          {/* List Rendering END */}
 
       </div>
-   
+         
+         {/* Student Child Component START */}
          <Student_child student_array={passingStudentInfo} dataArray = {Student_Info} />
+         {/* student Child Component END */}
+
     </div>
   )
 }
