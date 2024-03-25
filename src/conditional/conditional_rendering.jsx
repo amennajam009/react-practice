@@ -6,7 +6,7 @@ function Conditional_rendering() {
   // useState for if/else if /else
   const [LoggedInUser , setData] = useState('super-admin')
   // List Rendering using .map
-  const userList = ['user-1' , 'user-2' , 'user-3' , 'user-4' , 'user-5']
+  const userList = ['user-1' , 'user-2' , 'user-3' , 'user-4' , 'user-5','user-5']
   const result = userList.map(users => users)
 
   return (
@@ -34,8 +34,6 @@ function Conditional_rendering() {
          <h5 className='result'>{result}</h5>
          {/* List Rendering END */}
 
-
-         
       </div>
     </div>
   )
