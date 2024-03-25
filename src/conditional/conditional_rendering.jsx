@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Student_child from './student_child'
 import './conditional.css'
 function Conditional_rendering() {
   // useState for only if else
@@ -9,6 +10,36 @@ function Conditional_rendering() {
   const userList = ['user-1' , 'user-2' , 'user-3' , 'user-4' , 'user-5','user-5']
   const result = userList.map(users => users)
 
+
+  //student Info Array
+  const Student_Info = [
+    {
+        name:'amen',
+        age: '20',
+        education: 'university',
+        contact_no:'090078601'
+    },
+    {
+        name:'Micheal',
+        age: '28',
+        education: 'university',
+        contact_no:'090078601'
+    },
+    {
+        name:'Freaklin',
+        age: '29',
+        education: 'university',
+        contact_no:'090078601'
+    },
+    {
+        name:'Trevior',
+        age: '30',
+        education: 'university',
+        contact_no:'090078601'
+    }
+  ]
+
+  const passingStudentInfo = Student_Info.map(students => students)
   return (
     <div>
       <div className='conditional_div'>
@@ -35,6 +66,8 @@ function Conditional_rendering() {
          {/* List Rendering END */}
 
       </div>
+   
+         <Student_child student_array={passingStudentInfo} />
     </div>
   )
 }
