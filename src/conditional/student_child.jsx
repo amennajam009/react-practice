@@ -12,6 +12,7 @@ function Student_child(props) {
       <table className="table">
   <thead>
     <tr>
+      <th scope='col'>Id</th>
       <th scope="col">Name</th>
       <th scope="col">Age</th>
       <th scope="col">University</th>
@@ -21,8 +22,9 @@ function Student_child(props) {
   <tbody>
    
         {
-            studentData.map(student => (
+            studentData.map((student , index )=> (
                 <tr key={student.name}>
+                <td>{index+1}</td>    
                 <td>{student.name}</td>
                 <td>{student.age}</td>
                 <td>{student.education}</td>
