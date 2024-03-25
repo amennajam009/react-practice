@@ -40,6 +40,7 @@ function Conditional_rendering() {
   ]
 
   const passingStudentInfo = Student_Info.map(students => students)
+  console.log('pass%%%%%%',passingStudentInfo)
   return (
     <div>
       <div className='conditional_div'>
@@ -67,7 +68,7 @@ function Conditional_rendering() {
 
       </div>
    
-         <Student_child student_array={passingStudentInfo} />
+         <Student_child student_array={passingStudentInfo} dataArray = {Student_Info} />
     </div>
   )
 }

@@ -2,7 +2,8 @@ import React from 'react'
 
 function Student_child(props) {
     const studentData = props.student_array
-    console.log('student Array' , studentData)
+    const ArrayData = props.dataArray
+    // console.log('array data' , ArrayData)
   return (
     <div>
         <div className='d-flex ; justify-content-center mt-5'>
@@ -18,25 +19,23 @@ function Student_child(props) {
     </tr>
   </thead>
   <tbody>
-    <tr>
-
+   
         {
             studentData.map(student => (
-                <tr>
+                <tr key={student.name}>
                 <td>{student.name}</td>
                 <td>{student.age}</td>
-                <td>{student.university}</td>
+                <td>{student.education}</td>
                 <td>{student.contact_no}</td>
-
                 </tr>
             ))
         }
-      {/* <td>{studentData.name}</td>
-      <td>{studentData.age}</td>
+      {/* <td>{ArrayData[0].name}</td>
+      <td>{ArrayData[0].age}</td>
       <td>{studentData.university}</td>
       <td>{studentData.contact_no}</td> */}
 
-    </tr>
+    {/* </tr> */}
   </tbody>
 </table>
     </div>
