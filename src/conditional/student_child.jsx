@@ -31,6 +31,7 @@ function Student_child(props) {
                 </tr>
             ))
         }
+        
   </tbody>
 </table>
     </div>
