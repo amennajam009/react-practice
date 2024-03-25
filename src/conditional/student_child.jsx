@@ -19,10 +19,22 @@ function Student_child(props) {
   </thead>
   <tbody>
     <tr>
-      <td>{studentData.name}</td>
+
+        {
+            studentData.map(student => (
+                <tr>
+                <td>{student.name}</td>
+                <td>{student.age}</td>
+                <td>{student.university}</td>
+                <td>{student.contact_no}</td>
+
+                </tr>
+            ))
+        }
+      {/* <td>{studentData.name}</td>
       <td>{studentData.age}</td>
       <td>{studentData.university}</td>
-      <td>{studentData.contact_no}</td>
+      <td>{studentData.contact_no}</td> */}
 
     </tr>
   </tbody>
