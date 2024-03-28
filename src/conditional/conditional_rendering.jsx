@@ -3,8 +3,8 @@ import Student_child from './student_child'
 import './conditional.css'
 function Conditional_rendering() {
   // useState for only if else
-  const [LoggedIn , setLoggedData] = useState(false)
-  // useState for if/else if /else
+  const [LoggedIn , setLoggedData] = useState(false) 
+  // useState for if/else if /else click
   const [LoggedInUser , setData] = useState('super-admin')
   // List Rendering using .map
   const userList = ['user-1' , 'user-2' , 'user-3' , 'user-4' , 'user-5','user-5']
