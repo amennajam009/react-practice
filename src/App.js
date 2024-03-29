@@ -5,7 +5,7 @@ import Home from './home/home'
 import Shop from './shop/shop';
 import Review from './review/review';
 import Conditional_rendering from './conditional/conditional_rendering';
-
+import Crud from './CRUD/crud';
 import {
   BrowserRouter as Router,
   Route,
@@ -24,6 +24,7 @@ function App() {
   <Route exact path="/Shop" element={<Shop/>}></Route>
   <Route exact path="/Review" element={<Review/>}></Route>
   <Route exact path="/Conditional_rendering" element={<Conditional_rendering/>}></Route>
+  <Route exact path="/Crud" element={<Crud/>}></Route>
   </Routes>
   </Router>
     </div>
