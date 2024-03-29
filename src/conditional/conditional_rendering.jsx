@@ -46,16 +46,17 @@ const payLoad = {
 const [userData , setUserData] = useState(payLoad)
   const getFromData = (e) =>{
    e.preventDefault()
+   console.log(userData);
   }
 
-const handleData = (e) =>{
-  setUserData({...userData , [e.target.name]:e.target.value})
-}
+  const handleData = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
 
  
 
   const passingStudentInfo = Student_Info.map(students => students)
-  console.log('pass%%%%%%',passingStudentInfo)
+
   return (
     <div>
       <div className='conditional_div'>
@@ -91,21 +92,21 @@ const handleData = (e) =>{
          <h1 className={`${Dynamic_Class} text-center mt-5`}>Conditionally Apply Css Style</h1>
 
          <h1>Form Handling in React</h1>
-         <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" value={userData.name} onChange={handleData} aria-describedby="emailHelp"/>
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+         <form onSubmit={getFromData}>
+  <div className="mb-3">
+    <label htmlFor="exampleInputEmail1" className="form-label">Name</label>
+    <input type="text" className="form-control" id="exampleInputEmail1" value={userData.name} onChange={handleData} name="name" aria-describedby="emailHelp"/>
+    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Last Name</label>
-    <input type="text" class="form-control" value={userData.lastName} onChange={handleData} id="exampleInputPassword1"/>
+  <div className="mb-3">
+    <label htmlFor="exampleInputPassword1" className="form-label">Last Name</label>
+    <input type="text" className="form-control" value={userData.lastName} onChange={handleData} name="lastName" id="exampleInputPassword1"/>
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  <div className="mb-3 form-check">
+    <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+    <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" onClick={getFromData} class="btn btn-primary">Submit</button>
+  <button type="submit"  className="btn btn-primary">Submit</button>
 </form>
     </div>
   )
