@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Student_child from './student_child'
 import './conditional.css'
+import axios from 'axios'
 function Conditional_rendering() {
   // useState for only if else
   const [LoggedIn , setLoggedData] = useState(false) 
@@ -46,7 +47,7 @@ const payLoad = {
 const [userData , setUserData] = useState(payLoad)
   const getFromData = (e) =>{
    e.preventDefault()
-   console.log(userData);
+   axios.post("https://jsonplaceholder.typicode.com/posts" , userData)
   }
 
   const handleData = (e) => {
