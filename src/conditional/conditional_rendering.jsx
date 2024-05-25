@@ -42,16 +42,43 @@ function Conditional_rendering() {
   ]
 const payLoad = {
   name:"",
-  lastName:""
+  lastName:"",
+  file: null
 }
 const [userData , setUserData] = useState(payLoad)
-  const getFromData = (e) =>{
-   e.preventDefault()
-   axios.post("https://jsonplaceholder.typicode.com/posts" , userData)
+const [file , setFile] = useState(null)
+const getFromData = async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append('name', userData.name);
+  formData.append('lastName', userData.lastName);
+  formData.append('file', file);
+  try {
+    console.log(formData)
+    const response = await axios.post('https://jsonplaceholder.typicode.com/posts', formData, {
+    });
+
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
+  const handleFile = (event) =>{
+    const file = event.target.files[0];
+    console.log(file);
+    setFile(file);
   }
 
   const handleData = (e) => {
-    setUserData({ ...userData, [e.target.name]: e.target.value });
+    if (e.target.type === 'file') {
+      const file = e.target.files[0];
+      setUserData({ ...userData, file: file });
+    } else {
+      setUserData({ ...userData, [e.target.name]: e.target.value });
+    }
+    // setUserData({ ...userData, [e.target.name]: e.target.value });
   };
 
  
@@ -107,6 +134,10 @@ const [userData , setUserData] = useState(payLoad)
     <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
     <label className="form-check-label" htmlFor="exampleCheck1">Check me out</label>
   </div>
+  <div className="mb-3">
+        <label htmlFor="exampleInputFile" className="form-label">File input</label>
+        <input type="file" className="form-control" id="exampleInputFile" onChange={handleFile} name="file"/>
+      </div>
   <button type="submit"  className="btn btn-primary">Submit</button>
 </form>
     </div>

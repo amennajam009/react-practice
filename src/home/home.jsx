@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import Shop from "../shop/shop";
 import './home.css'
 import Review from "../review/review";
+import Fragments from "../Fragments/fragments";
 
 
 
@@ -37,9 +38,11 @@ function Home(){
         <div className="review_child">
         <Review reviewData={reviewPropsData} sndObject={myArr} alertFunction={generateAlert} />
         </div>
-
+        
+     
         </div>
         </div>
+        <Fragments/>
         </> 
     )
 }

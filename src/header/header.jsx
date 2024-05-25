@@ -18,13 +18,25 @@ function Header(){
             <Link class="nav-link active" aria-current="page" to="/Shop">Shop</Link>
         </li>
         <li class="nav-item">
-            <Link class="nav-link active" aria-current="page" to="/Review">Review</Link>
-        </li>
-        <li class="nav-item">
             <Link class="nav-link active" aria-current="page" to="/Conditional_rendering">Conditional-rendering</Link>
         </li>
         <li class="nav-item">
             <Link class="nav-link active" aria-current="page" to="/Crud">Crud</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link active" aria-current="page" to="/Task">Task</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link active" aria-current="page" to="/useMemo">useMemo</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link active" aria-current="page" to="/Test_re_use_function">re-use-Components</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link active" aria-current="page" to="/use_Ref">use_Ref</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link active" aria-current="page" to="/hoc">HOC</Link>
         </li>
       </ul>
       <form class="d-flex">
