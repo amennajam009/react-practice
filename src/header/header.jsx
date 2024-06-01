@@ -35,8 +35,11 @@ function Header(){
         <li class="nav-item">
             <Link class="nav-link active" aria-current="page" to="/use_Ref">use_Ref</Link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item"> 
             <Link class="nav-link active" aria-current="page" to="/hoc">HOC</Link>
+        </li>
+        <li class="nav-item">
+            <Link class="nav-link active" aria-current="page" to="/context_Api">Context-API</Link>
         </li>
       </ul>
       <form class="d-flex">

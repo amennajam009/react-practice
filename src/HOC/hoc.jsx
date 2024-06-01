@@ -15,6 +15,4 @@ const Counter = (WrappedComponent) =>{
       return Hoc;
 }
 
-
-
 export default Counter;
