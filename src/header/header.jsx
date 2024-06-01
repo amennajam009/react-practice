@@ -41,6 +41,9 @@ function Header(){
         <li class="nav-item">
             <Link class="nav-link active" aria-current="page" to="/context_Api">Context-API</Link>
         </li>
+        <li class="nav-item">
+            <Link class="nav-link active" aria-current="page" to="/hoc_practice">hoc_practice</Link>
+        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
