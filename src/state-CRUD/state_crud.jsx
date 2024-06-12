@@ -82,8 +82,7 @@ function State_crud() {
     <td>{items.city}</td>
     <td>{items.check_status}</td>
   </tr>
-    ))}
-
+  ))}
   </tbody>
   <tbody>
   </tbody>
