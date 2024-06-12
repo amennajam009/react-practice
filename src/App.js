@@ -13,6 +13,7 @@ import Component_1 from './HOC/component-1';
 import Context_Api from './context-API/context_Api';
 import Shop_Hoc from './practice/shop';
 import UseEffect_dependency_list from './useEffect-Dependency-List/useEffect_dependency_list';
+import State_crud from './state-CRUD/state_crud';
 import {
   BrowserRouter as Router,
   Route,
@@ -40,6 +41,8 @@ function App() {
   <Route exact path="/context_Api" element={<Context_Api/>}></Route>
   <Route exact path="/hoc_practice" element={<Shop_Hoc/>}></Route>
   <Route exact path="/useEffect_dependency" element={<UseEffect_dependency_list/>}></Route>
+  <Route exact path="/useEffect_dependency" element={<UseEffect_dependency_list/>}></Route>
+  <Route exact path="/state_crud" element={<State_crud/>}></Route>
   </Routes>
   </Router>
     </div>
