@@ -23,7 +23,6 @@ function State_crud() {
         check_status
       }
       setMyArray([payLoad, ...myArray])
-      console.log('Array after push', [...myArray, payLoad]);
     }
 
     function onDelete(index) {
