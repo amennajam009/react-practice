@@ -65,11 +65,14 @@ function State_crud() {
 <table class="table">
   <thead>
     <tr>
+    <th scope="col">#</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Country</th>
       <th scope="col">City</th>
       <th scope="col">Status</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Update</th>
     </tr>
   </thead>
   <tbody>
@@ -81,7 +84,9 @@ function State_crud() {
     <td>{items.country}</td>
     <td>{items.city}</td>
     <td>{items.check_status}</td>
-  </tr>
+    <td><button className='btn bg-danger text-white'>Delete</button></td>
+    <td><button className='btn bg-success text-white'>Delete</button></td>
+    </tr>
   ))}
   </tbody>
   <tbody>
