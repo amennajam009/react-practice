@@ -26,6 +26,11 @@ function State_crud() {
       console.log('Array after push', [...myArray, payLoad]);
     }
 
+    function onDelete(index) {
+      const updatedArray = myArray.filter((currentItem , i) => i !== index);
+      setMyArray(updatedArray);
+  }
+
   return (
 <>
 <div className='d-flex justify-content-center mt-5'>
@@ -84,8 +89,8 @@ function State_crud() {
     <td>{items.country}</td>
     <td>{items.city}</td>
     <td>{items.check_status}</td>
-    <td><button className='btn bg-danger text-white'>Delete</button></td>
-    <td><button className='btn bg-success text-white'>Delete</button></td>
+    <td><button className='btn bg-danger text-white' onClick={() => onDelete(index)}>Delete</button></td>
+    <td><button className='btn bg-success text-white'>Update</button></td>
     </tr>
   ))}
   </tbody>
