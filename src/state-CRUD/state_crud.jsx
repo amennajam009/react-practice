@@ -61,8 +61,7 @@ function State_crud() {
   <button onClick={submit} class="btn btn-primary">Submit</button>
 </form>
 
-{myArray.map((items)=> (
-<>
+
 <table class="table">
   <thead>
     <tr>
@@ -74,20 +73,23 @@ function State_crud() {
     </tr>
   </thead>
   <tbody>
+    {myArray.map((items , index) => (
     <tr>
-      <th scope="row">1</th>
-      <td>{items.first_name}</td>
-      <td>{items.last_name}</td>
-      <td>{items.country}</td>
-      <td>{items.city}</td>
-      <td>{items.check_status}</td>
-    </tr>
+    <th scope="row">{index+1}</th>
+    <td>{items.first_name}</td>
+    <td>{items.last_name}</td>
+    <td>{items.country}</td>
+    <td>{items.city}</td>
+    <td>{items.check_status}</td>
+  </tr>
+    ))}
+
   </tbody>
   <tbody>
   </tbody>
 </table>
-</>
-))}
+
+
 
 
 </div>
