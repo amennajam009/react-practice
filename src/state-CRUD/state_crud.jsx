@@ -7,6 +7,7 @@ function State_crud() {
   const [city, setCity] = useState("");
   const [check_status, setStatus] = useState([]);
   const [myArray, setMyArray] = useState([]);
+  const [editIndex, setEditIndex] = useState()
   const [editFormData , setEditFromData] = useState({
     first_name : '',
     last_name: '',
@@ -52,8 +53,8 @@ function State_crud() {
   }
 
   function getItemById(index,item){
-    console.log('index',index)
-    console.log('item',item)
+    const dataIndex = index
+    setEditIndex(dataIndex)
     const itemData = item
     setEditFromData({
       first_name : itemData.first_name,
@@ -63,13 +64,20 @@ function State_crud() {
     })
   }
   function updateItem(index) {
-    const payLoad = {
-      first_name:editFormData.first_name,
-      last_name:editFormData.last_name,
-      country:editFormData.country,
-      city:editFormData.city
-    }
-    setEditFromData([payLoad])
+    const updatedItem = {
+      ...myArray[index],  // maintain other properties unchanged
+      first_name: editFormData.first_name,
+      last_name: editFormData.last_name,
+      country: editFormData.country,
+      city: editFormData.city
+    };
+  
+    // Create a new array with updatedItem replacing the old item
+    const updatedArray = [...myArray];
+    updatedArray[index] = updatedItem;
+  
+    // Update state variable myArray with the updated array
+    setMyArray(updatedArray);
   }
 
   return (
@@ -275,7 +283,7 @@ function State_crud() {
                           >
                             Close
                           </button>
-                          <button type="button" className="btn btn-primary">
+                          <button type="button" className="btn btn-primary" onClick={() => updateItem(editIndex)}>
                             Confirm Update
                           </button>
                         </div>
