@@ -13,6 +13,25 @@ function State_crud() {
         'Inactive'
     ]
 
+    // Testing 
+    const [formData , setFormData] = useState({
+      product_1 : '',
+      product_2 : '',
+      product_3 : '',
+      product_4 : ''
+     })
+
+     function submitTest(e){
+      e.preventDefault();
+      const payLoad = {
+        product_1 : formData.product_1,
+        product_2 : formData.product_2,
+        product_3 : formData.product_3,
+        product_4 : formData.product_4
+      }
+      console.log('formDataaaa', payLoad)
+     }
+
     function submit (e){
      e.preventDefault();
       const payLoad = {
@@ -99,6 +118,29 @@ function State_crud() {
 
 
 
+
+
+{/* practice */}
+<form style={{marginTop:'20%'}}>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Product 1</label>
+    <input type="text" value={formData.product_1} onChange={(e) => setFormData({ ...formData, product_1: e.target.value })} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Product 2</label>
+    <input type="text" value={formData.product_2} onChange={(e) => setFormData({ ...formData, product_2: e.target.value })}  class="form-control" id="exampleInputPassword1"/>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Product 3</label>
+    <input type="text" value={formData.product_3} onChange={(e) => setFormData({ ...formData, product_3: e.target.value })}  class="form-control" id="exampleInputPassword1"/>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Product 4</label>
+    <input type="text" value={formData.product_4} onChange={(e) => setFormData({ ...formData, product_4: e.target.value })}  class="form-control" id="exampleInputPassword1"/>
+  </div>
+  <button onClick={submitTest} class="btn btn-success">Submit</button>
+</form>
 
 </div>
 </div>
