@@ -235,6 +235,8 @@ function State_crud() {
                               className="form-control"
                               id="lastName"
                               placeholder="Last Name"
+                              value={editFormData.last_name}
+                              onChange={(e)=> setEditFromData({...editFormData,last_name:e.target.value})}
                             />
                           </div>
 
@@ -247,6 +249,8 @@ function State_crud() {
                               className="form-control"
                               id="cardHeading"
                               placeholder="Card Heading"
+                              value={editFormData.country}
+                              onChange={(e)=> setEditFromData({...editFormData,country:e.target.value})}
                             />
                           </div>
                           <div className="mb-3">
@@ -258,6 +262,8 @@ function State_crud() {
                               className="form-control"
                               id="cardHeading"
                               placeholder="Card Heading"
+                              value={editFormData.city}
+                              onChange={(e)=> setEditFromData({...editFormData,city:e.target.value})}
                             />
                           </div>
                         </div>
